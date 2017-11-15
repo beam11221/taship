@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>TA chip</title>
+<meta name="viewport" content="width=divice-width, initial-scale=1.0">
+<link rel="stylesheet" href="blueberry.css" />
+<style type="text/css">
+form {
+    border: 3px solid #f1f1f1;
+}
+
+input[type=text], input[type=password] {
+    width: 25%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #333333;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 30%;
+    text-align: center;
+    opacity: 0.95;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+.imgcontainer {
+    text-align: center;
+    margin: 100px 0 12px 0;
+}
+
+img.avatar {
+    width: 15%;
+    border-radius: 50%;
+}
+
+.container {
+    padding: 16px;
+    text-align: center;
+}
+
+span.psw {
+    float: right;
+    padding-top: 16px;
+}
+* {
+	margin: 0;
+	border: 0;
+	padding: 0;
+}
+body {
+	background: #f0f0f0;
+	font: 14px/20px Arial, San-Serif;
+	color: #555;
+	margin: 0;
+}
+h1 {
+	text-align: center;
+	font-size: 180%;
+	line-height: 120%;
+	padding: 5% 0;
+}
+h2 {
+	text-decoration: underline;
+	line-height: 208%;
+	padding-left: 2%;
+}
+h3 {
+	line-height: 110%;
+	padding: 5% 0;
+}
+p {
+	padding: 1%
+}
+img {
+	text-align: center;
+	max-width: 100%;
+	height: auto;
+	width: auto;
+}
+a {
+	color: #FFF;
+	text-decoration: none;
+	font-weight: bold;
+}
+a:hover {
+	color: #036A81;
+}
+header {
+	background: #333333;
+	width: 100%;
+	height: 86px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 100;
+	opacity: 0.90;
+}
+#logo {
+	margin: 20px;
+	float: left;
+	width: 200px;
+	height: 60px;
+	background: url(http://www.tachip.pltplastic.com/image/header.png) no-repeat center;
+}
+nav {
+	float: right;
+	padding: 35px 20px 20px 0;
+}
+#menu-icon {
+	display: hidden;
+	width: 40px;
+	height: 40px;
+	background: url(http://www.w3newbie.com/wp-content/uploads/icon.png) center;
+}
+a:hover#menu-icon {
+	border-radius: 4px 4px 0 0;
+}
+ul {
+	list-style: none;
+}
+nav ul li {
+	display: inline-block;
+	float: left;
+	padding: 10px;
+}
+.current {
+	color: #FFF;
+}
+#doc {
+	margin: 40px 0;
+}
+#content {
+	margin: 0 auto;
+	max-width: 1140px;
+}
+section {
+	width: 29%;
+	float: left;
+	margin: 2% 2%;
+	text-align: center;
+}
+.clear {
+	clear: both;
+}
+article {
+	float: left;
+	margin: 0 auto;
+	width: 50%;
+	height: auto;
+	padding:4%;
+}
+aside {
+	float: right;
+	margin: 0 auto;
+	width: 35%;
+	height: auto;
+	padding: 3%;
+}
+ul.gym li {
+	padding-left: 3%;
+}
+footer {
+	background: #333333;
+	width: 100%;
+	overflow: hidden;
+	opacity: 0.90;
+}
+footer p, footer h3 {
+	color: #FFF;
+}
+footer p a {
+	color: #FFF;
+	text-decoration: none;
+}
+ul.social li {
+	display: inline;
+}
+ul.social li img {
+	height: 50px;
+}
+footer.second {
+	border-top: 1px solid #4D4E50;
+	background-color: #333333;
+	max-height: 50px;
+	text-align: center;
+	opacity: 0.95;
+}
+
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+<script src="jquery.blueberry.js"></script>
+<script>
+$(window).load(function() {
+	$('.blueberry').blueberry();
+});
+</script>
+</head>
+<body>
+	<header>
+		<a href="/home" id="logo"></a>
+		<nav>
+			<a href="#" id="menu-icon"></a>
+			<ul>
+				<li><a href="/home" class="current">HOME</a></li>
+				<li><a href="/sign-in" class="current">SIGN IN</a></li>
+				<li><a href="/sign-up" class="current">SIGN UP</a></li>
+			</ul>
+		</nav>
+	</header>
+	<div id="doc">
+		<div class="content">
+			<form>
+  				<div class="imgcontainer">
+    				<img src="http://www.tachip.pltplastic.com/image/sign-in.png">
+  				</div>
+  				<div class="container">
+    				<label><b>Username</b></label>
+    				<input type="text" placeholder="Enter Username" id="userNm" name="userNm" required><br>
+
+    				<label><b>Password</b></label>
+    				<input type="password" placeholder="Enter Password" id="password" name="password" required><br>
+  					<input type="checkbox" checked="checked"> Remember me <br>
+    				<button id="signinButton" type="button" onclick="doSignin()">Login</button>
+ 				 </div>
+			</form>
+		</div>
+	</div>
+	<div class="clear"></div>
+	
+	<footer>
+		<section>
+			<h3><b>TA CHIP</b></h3>
+			<p><b>096-003-7720</b><br><br>
+				2/504 libery Houze<br>
+			Bangkok 10100</p>
+		</section>
+		<section>
+			<h3>Connect with us</h3>
+			<ul class="social">
+				<li><a href="#"><img src="facebook1.png" /></a></li>
+				<li><a href="#"><img src="googleplus.png" /></a></li>
+				<li><a href="#"><img src="twitter1.png" /></a></li>
+				<li><a href="#"><img src="youtube1.png" /></a></li>
+		</section>
+		<section>
+			<img src="https://www.w3newbie.com/wp-content-uploads/facebook1.png" />
+		</section>
+	</footer>
+	<footer class="second">
+		<p>copyright - Pakpoom Kaewtongkam 2017</p>
+	</footer>
+
+    <script>
+        var doSignin = function () {
+            if ($('#userNm').val() == "") {
+                return alert("Please input your username.");
+            }
+            if ($('#password').val() == "") {
+                return alert("Please input your password.");
+            }
+            $("#signinButton").prop("disabled", true);
+
+            $.ajax ({
+                type: "POST",
+                url: "/sign-in",
+                data: {
+                    userNm: $('#userNm').val(),
+                    password: $('#password').val()
+                },
+                dataType: "json",
+                xhrFields: {
+                    withCredentials: true
+                }
+            })
+            .done (function(result) {
+                alert("done!");
+                if (result.errCode) {   //have error in message, invalid username or password
+                    alert("Invalid username or password, plese try again.");
+                }
+                else {   //Valid 
+                    location.href = '/home';
+                } 
+            })
+            .fail (function(result) {
+                alert('fail');
+            })
+            .always (function(result) {
+                alert('always');
+                $('#signinButton').prop('disabled', false);
+            });
+        };
+        
+    </script>
+    
+</body>
+</html>
+

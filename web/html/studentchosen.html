@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>TA ship</title>
+<meta name="viewport" content="width=divice-width, initial-scale=1.0">
+<link rel="stylesheet" href="blueberry.css" />
+<style type="text/css">
+* {
+	margin: 0;
+	border: 0;
+	padding: 0;
+}
+body {
+	background: #f0f0f0;
+	font: 14px/20px Arial, San-Serif;
+	color: #555;
+	margin: 0;
+}
+h1 {
+	text-align: center;
+	font-size: 180%;
+	line-height: 120%;
+	padding: 5% 0;
+}
+h2 {
+	text-decoration: underline;
+	line-height: 208%;
+	padding-left: 2%;
+}
+h3 {
+	line-height: 110%;
+	padding: 5% 0;
+}
+p {
+	padding: 1%
+}
+img {
+	text-align: center;
+	max-width: 100%;
+	height: auto;
+	width: auto;
+}
+a {
+	color: #FFF;
+	text-decoration: none;
+	font-weight: bold;
+}
+a:hover {
+	color: #036A81;
+}
+header {
+	background: #333333;
+	width: 100%;
+	height: 86px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 100;
+	opacity: 0.90;
+}
+#logo {
+	margin: 20px;
+	float: left;
+	width: 200px;
+	height: 60px;
+	background: url(http://www.tachip.pltplastic.com/image/header.png) no-repeat center;
+}
+nav {
+	float: right;
+	padding: 35px 20px 20px 0;
+}
+#menu-icon {
+	display: hidden;
+	width: 40px;
+	height: 40px;
+	background: url(http://www.w3newbie.com/wp-content/uploads/icon.png) center;
+}
+a:hover#menu-icon {
+	border-radius: 4px 4px 0 0;
+}
+ul {
+	list-style: none;
+}
+nav ul li {
+	display: inline-block;
+	float: left;
+	padding: 10px;
+}
+.current {
+	color: #FFF;
+}
+
+
+section {
+	width: 29%;
+	float: left;
+	margin: 2% 2%;
+	text-align: center;
+}
+.clear {
+	clear: both;
+}
+
+footer {
+	background: #333333;
+	width: 100%;
+	overflow: hidden;
+	opacity: 0.90;
+}
+footer p, footer h3 {
+	color: #FFF;
+}
+footer p a {
+	color: #FFF;
+	text-decoration: none;
+}
+ul.social li {
+	display: inline;
+}
+ul.social li img {
+	height: 50px;
+}
+footer.second {
+	border-top: 1px solid #4D4E50;
+	background-color: #333333;
+	max-height: 50px;
+	text-align: center;
+	opacity: 0.95;
+}
+button {
+    background-color: #333333;
+    color: white;
+    padding: 10px 40px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 30%;
+    opacity: 0.80%;
+}
+.subject {
+	float: left;
+	margin-top: 10%;
+	margin-left: 0%;
+	text-align: center;
+}
+.profile{
+	float:right;
+	margin-top: 7%;
+	margin-right: 0%;
+
+}
+div.profilepic{
+	float: left;
+}
+.table{
+	float: center;
+	margin-top: 10%;
+	
+	text-align: left;
+
+}
+.tg  {
+	border-collapse:collapse;
+	border-spacing:0;
+	border-color:#ccc;
+	margin:0px auto;
+}
+.tg td{
+	font-family:Arial, sans-serif;
+	font-size:20px;
+	padding:30px 30px;
+	border-style:solid;
+	border-width:1px;
+	overflow:hidden;
+	word-break:normal;
+	border-color:#ccc;
+	color:#333;
+	background-color:#fff;
+}
+.tg th{
+	font-family:Arial, sans-serif;
+	font-size:14px;
+	font-weight:normal;
+	padding:10px 5px;
+	border-style:solid;
+	border-width:1px;
+	overflow:hidden;
+	word-break:normal;
+	border-color:#ccc;
+	color:#333;
+	background-color:#f0f0f0;
+}
+.tg .tg-yw4l{
+	vertical-align:top
+}
+</style>
+</head>
+<body>
+	<header>
+		<a href="/home" id="logo"></a>
+		<nav>
+			<a href="#" id="menu-icon"></a>
+			<ul>
+				<li><a href="/TChome">HOME</a></li>
+				
+				<li><a href="/home">SIGNOUT</a></li>
+			</ul>
+		</nav>
+	</header>
+	<section class="subject">
+		<button><a href="/studentchosen">FRA121</a></button><br><br>
+		<button><a href="/studentchosen">FRA241</a></button>
+		
+	</section>
+	<section class="profile">
+		<a href="/TCprofileEdit">
+			<div class="profilepic">
+				<img src="http://www.tachip.pltplastic.com/image/avatar.png" alt="avatar" style="width:auto;height:70px;" >
+			</div>
+		</a>
+	</section>
+	<section class="table">
+		<table class="tg">
+  <tr>
+    <th class="tg-yw4l">Name</th>
+    <th class="tg-yw4l">Student ID</th>
+    <th class="tg-yw4l">Faculty</th>
+    <th class="tg-yw4l">College Years</th>
+    <th class="tg-yw4l">GPA</th>
+    <th class="tg-yw4l">Chooses</th>
+  </tr>
+  <tr>
+    <td class="tg-yw4l"></td>
+    <td class="tg-yw4l"></td>
+    <td class="tg-yw4l"></td>
+    <td class="tg-yw4l"></td>
+    <td class="tg-yw4l"></td>
+    <td class="tg-yw4l"></td>
+  </tr>
+  <tr>
+    <td class="tg-yw4l"></td>
+    <td class="tg-yw4l"></td>
+    <td class="tg-yw4l"></td>
+    <td class="tg-yw4l"></td>
+    <td class="tg-yw4l"></td>
+    <td class="tg-yw4l"></td>
+  </tr>
+</table>
+	</section>
+
+
+
+	<div class="clear"></div>
+	<footer>
+		<section>
+			<h3><b>TA SHIP</b></h3>
+			<p><b>096-003-7720</b><br><br>
+				2/504 libery Houze<br>
+			Bangkok 10100</p>
+		</section>
+		<section>
+			<h3>Connect with us</h3>
+			<ul class="social">
+				<li><a href="#"><img src="facebook1.png" /></a></li>
+				<li><a href="#"><img src="googleplus.png" /></a></li>
+				<li><a href="#"><img src="twitter1.png" /></a></li>
+				<li><a href="#"><img src="youtube1.png" /></a></li>
+		</section>
+		<section>
+			<img src="https://www.w3newbie.com/wp-content-uploads/facebook1.png" />
+		</section>
+	</footer>
+	<footer class="second">
+		<p>copyright - Pakpoom Kaewtongkam 2017</p>
+	</footer>
+
+
+</body>
+</html>

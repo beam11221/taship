@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>TA chip</title>
+<meta name="viewport" content="width=divice-width, initial-scale=1.0">
+<link rel="stylesheet" href="blueberry.css" />
+<style type="text/css">
+* {
+	margin: 0;
+	border: 0;
+	padding: 0;
+}
+body {
+	background: #f0f0f0;
+	font: 14px/20px Arial, San-Serif;
+	color: #555;
+	margin: 0;
+}
+h1 {
+	text-align: center;
+	font-size: 180%;
+	line-height: 120%;
+	padding: 5% 0;
+}
+h2 {
+	line-height: 208%;
+	padding-left: 0%;
+}
+h3 {
+	line-height: 110%;
+	padding: 5% 0;
+}
+p {
+	padding: 1%
+}
+img {
+	text-align: center;
+	max-width: 100%;
+	height: auto;
+	width: auto;
+}
+a {
+	color: #FFF;
+	text-decoration: none;
+	font-weight: bold;
+}
+a:hover {
+	color: #036A81;
+}
+header {
+	background: #333333;
+	width: 100%;
+	height: 86px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 100;
+	opacity: 0.90;
+}
+.signup {
+	float: left;
+	margin-top: 0%;
+	margin-left: 14%;
+	text-align: center;
+}
+img.avatar {
+    width: 50%;
+    border-radius: 20%;
+}
+.container {
+    padding: 16px;
+    text-align: left;
+}
+.imgcontainer {
+    text-align: center;
+    margin: 130px 0 12px 0;
+}
+
+#logo {
+	margin: 20px;
+	float: left;
+	width: 200px;
+	height: 60px;
+	background: url(http://www.tachip.pltplastic.com/image/header.png) no-repeat center;
+}
+nav {
+	float: right;
+	padding: 35px 20px 20px 0;
+}
+#menu-icon {
+	display: hidden;
+	width: 40px;
+	height: 40px;
+	background: url(http://www.w3newbie.com/wp-content/uploads/icon.png) center;
+}
+a:hover#menu-icon {
+	border-radius: 4px 4px 0 0;
+}
+ul {
+	list-style: none;
+}
+nav ul li {
+	display: inline-block;
+	float: left;
+	padding: 10px;
+}
+.current {
+	color: #FFF;
+}
+#doc {
+	margin: 40px 0;
+}
+#content {
+	margin: 0 auto;
+	max-width: 1140px;
+}
+.blueberry {
+	max-width: 960px;
+	margin-top: 110px;
+}
+section {
+	width: 29%;
+	float: left;
+	margin: 2% 2%;
+	text-align: center;
+}
+.clear {
+	clear: both;
+}
+article {
+	float: left;
+	margin: 0 auto;
+	width: 50%;
+	height: auto;
+	padding:4%;
+}
+aside {
+	float: right;
+	margin: 0 auto;
+	width: 35%;
+	height: auto;
+	padding: 3%;
+}
+ul.gym li {
+	padding-left: 3%;
+}
+footer {
+	background: #333333;
+	width: 100%;
+	overflow: hidden;
+	opacity: 0.90;
+}
+footer p, footer h3 {
+	color: #FFF;
+}
+footer p a {
+	color: #FFF;
+	text-decoration: none;
+}
+ul.social li {
+	display: inline;
+}
+ul.social li img {
+	height: 50px;
+}
+footer.second {
+	border-top: 1px solid #4D4E50;
+	background-color: #333333;
+	max-height: 50px;
+	text-align: center;
+	opacity: 0.95;
+}
+/* Full-width input fields */
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+button {
+    background-color: #333333;
+    color: white;
+    padding: 14px 60px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 30%;
+    opacity: 0.80%;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+    padding: 14px 20px;
+    background-color: #f44336;
+}
+
+/* Float cancel and signup buttons and add an equal width */
+.cancelbtn,.signupbtn {float:left;width:50%}
+/* Add padding to container elements */
+.container {
+    padding: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    padding-top: 60px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button (x) */
+.close {
+    position: absolute;
+    right: 35px;
+    top: 100px;
+    color: #000;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: red;
+    cursor: pointer;
+}
+
+/* Clear floats */
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/* Change styles for cancel button and signup button on extra small screens */
+@media screen and (max-width: 300px) {
+    .cancelbtn, .signupbtn {
+       width: 100%;
+    }
+}
+</style>
+</head>
+<body>
+	<header>
+		<a href="/home" id="logo"></a>
+		<nav>
+			<a href="#" id="menu-icon"></a>
+			<ul>
+				<li><a href="/home" class="current">HOME</a></li>
+				<li><a href="/sign-in" class="current">SIGN IN</a></li>
+				<li><a href="/sign-up" class="current">SIGN UP</a></li>
+			</ul>
+		</nav>
+	</header>
+	<div class="imgcontainer">
+    				<img src="http://www.tachip.pltplastic.com/image/sign-up.png">
+  	</div>
+	<section class="signup">
+    	<img src="http://www.tachip.pltplastic.com/image/avatar.png" alt="Avatar" class="avatar"><br>
+    	<button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">TEACHER</button>
+
+		<div id="id01" class="modal">
+		  <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">×</span>
+		  <form class="modal-content animate" action="/action_page.php">
+		    <div class="container">
+		    <h2>Sign up as Teacher</h2>
+		      <label><b>Username</b></label>
+		      <input type="text" placeholder="Enter username" name="userNm" required>
+
+		      <label><b>Password</b></label>
+		      <input type="password" placeholder="Enter Password" name="password" required>
+
+		      <label><b>Repeat Password</b></label>
+		      <input type="password" placeholder="Repeat Password" name="passwordRepeat" required>
+		      <input type="checkbox" checked="checked"> Remember me
+		      <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
+
+		      <div class="clearfix">
+
+		        <button id="signupBtn" type="button" class="signupbtn" onclick="doSignup()">Sign Up</button>
+		      </div>
+		    </div>
+		  </form>
+		</div>
+
+		<script>
+		// Get the modal
+		var modal = document.getElementById('id01');
+
+		// When the user clicks anywhere outside of the modal, close it
+		window.onclick = function(event) {
+		    if (event.target == modal) {
+		        modal.style.display = "none";
+		    }
+		}
+		</script>
+	</section>
+
+	<section class="signup">
+    	<img src="http://www.tachip.pltplastic.com/image/avatar.png" alt="Avatar" class="avatar"><br>
+    	<button onclick="document.getElementById('id02').style.display='block'" style="width:auto;">TA</button>
+		<div id="id02" class="modal">
+		  <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">×</span>
+		  <form class="modal-content animate" action="/action_page.php">
+		    <div class="container">
+		    <h2>Sign up as TA</h2>
+		      	<label><b>Username</b></label>
+		      	<input type="text" placeholder="Enter username" id="userNm" name="userNm" required>
+
+		      	<label><b>Password</b></label>
+		      	<input type="password" placeholder="Enter Password" id="password" name="password" required>
+
+		     	<label><b>Repeat Password</b></label>
+		      	<input type="password" placeholder="Repeat Password" id="passwordRepeat" name="passwordRepeat" required>
+		      	<input type="checkbox" checked="checked"> Remember me
+		      	<p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
+
+		      	<div class="clearfix">
+
+		        	<button id="signupBtn" type="button"  onclick="doSignup()">Sign Up</button>
+		      	</div>
+		    </div>
+		  </form>
+		</div>
+
+		<script>
+		// Get the modal
+
+        var doSignup = function(){
+            alert('onclick');
+            if ($('#userNm').val() == "") {
+                return alert("Please input your username.");
+            }
+            if ($('#password').val() == "") {
+                return alert("Please input your password.");
+            }
+            if ($('#passwordRepeat').val() == "") {
+                return alert("Please repeat password");
+            }
+            $("#signupBtn").prop("disabled", true);
+
+            /*$.ajax ({
+                type: "POST",
+                url: "/sign-up",
+                data: {
+                    userNm: $('#userNm').val(),
+                    password: $('#password').val(),
+                    passwordRepeat: $('#passwordRepeat').val()
+                },
+                dataType: "json",
+                xhrFields: {
+                    withCredentials: true
+                }
+            })
+            .done (function(result) {
+                alert('done');
+            })
+            .fail (function(result) {
+                alert('fail');
+            })
+            .always (function(result){
+                alert('always');
+                $("#signinButton").prop("disabled", false);
+            }); */
+        };
+		</script>
+	</section>
+
+
+
+	<div class="clear"></div>
+	
+	<footer>
+		<section>
+			<h3><b>TA CHIP</b></h3>
+			<p><b>096-003-7720</b><br><br>
+				2/504 libery Houze<br>
+			Bangkok 10100</p>
+		</section>
+		<section>
+			<h3>Connect with us</h3>
+			<ul class="social">
+				<li><a href="#"><img src="facebook1.png" /></a></li>
+				<li><a href="#"><img src="googleplus.png" /></a></li>
+				<li><a href="#"><img src="twitter1.png" /></a></li>
+				<li><a href="#"><img src="youtube1.png" /></a></li>
+		</section>
+		<section>
+			<img src="https://www.w3newbie.com/wp-content-uploads/facebook1.png" />
+		</section>
+	</footer>
+	<footer class="second">
+		<p>copyright - Pakpoom Kaewtongkam 2017</p>
+	</footer>
+
+</body>
+</html>
+
