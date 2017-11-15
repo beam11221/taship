@@ -10,9 +10,9 @@ internals.manifest = {
         {
             port: 8000,
             labels: ['web'],
-			routes: {
-				files: {
-					relativeTo: Path.join(__dirname, '../')
+		routes: {
+			files: {
+				relativeTo: Path.join(__dirname, '../')
 				}
 			}
         },
@@ -24,7 +24,17 @@ internals.manifest = {
 					relativeTo: Path.join(__dirname, '../')
 				}
 			}
-        }
+        },
+    	{
+		port: 8888,
+		label:['ta'],
+		routes: {
+			files: {
+				relativeTo: Path.join(__dirname, '../')
+				}
+			}
+	}
+	    
     ],
     registrations: [  
         {
