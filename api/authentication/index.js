@@ -1,5 +1,4 @@
 const auth = require('./handlers/auth.js');
-const Config = require('../../config.json');
 
 exports.register = function(server, options, next){
     
@@ -8,12 +7,10 @@ exports.register = function(server, options, next){
         cookie: 'sid',
         keepAlive: true,
         ttl: 604800000,   // 7 days
-        //redirectTo: '/sign-in',
         isSecure: false,
         isHttpOnly: true,
         validateFunc: function (request, session, callback) {
 
-            console.log(session);
 			if (!session.sid) { 
 				return callback(null, false); //no cookie sid
 			}
@@ -30,7 +27,7 @@ exports.register = function(server, options, next){
                     if (error) throw error;
                     
                     if (results[0][0].vResult === 0){
-                        console.log('Fail cookie');
+                        console.log('Fail auth');
                         return callback(null, false);
                     }
                     else{ //valid cookie return true
@@ -44,9 +41,11 @@ exports.register = function(server, options, next){
     
     server.route([
         {method: 'POST', path: '/sign-in', config: auth.signInPost },
-        //{method: 'POST', path: '/change-password', config: auth.changePassword}
-        {method: 'POST', path: '/sign-up', config: auth.signUpPost}
-        //{method: 'POST', path: '/sign-out', config: auth.signOut }
+        {method: 'POST', path: '/change-password', config: auth.changePassword},
+        {method: 'POST', path: '/sign-up', config: auth.signUpPost},
+        {method: 'POST', path: '/sign-out', config: auth.signout},
+        {method: 'POST', path: '/ford', config: auth.ford},
+        
     ]); 
         
    next(); 
